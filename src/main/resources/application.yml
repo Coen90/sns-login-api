@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+
+  # todo 자신의 데이터베이스 정보 입력
+  datasource:
+    url: jdbc:mariadb://localhost:3306/shop?serverTimezone=Asia/Seoul
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql : true # sql 예쁘게 출력
+        default_batch_fetch_size: 1000
+
+    show-sql: true  # sql 출력
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 10MB # 파일 업로드 요청 시 하나의 파일 크기 10MB로 제한
+      max-request-size: 100MB # 파일 업로드 요청 시 모든 파일의 크기의합 100MB로 제한
+
+logging:
+  level:
+    org.hibernate.type: trace
+
+file:
+  upload:
+    path: c:/shop/ # todo 자신의 파일 업로드 경로 입력
+
+kakao:
+  client:
+    id: ${KAKAO_LOGIN_ID}
+    secret: ${KAKAO_LOGIN_SECRET}
+
+token:
+  secret: ${JWT_TOKEN_SECRET}
+  access-token-expiration-time: 900000  # 15분
+  refresh-token-expiration-time: 1210500000 # 2주
