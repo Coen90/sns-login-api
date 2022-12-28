@@ -26,6 +26,7 @@ public enum ErrorCode {
     // 상품
     FIRST_ITEM_IMAGE_NOT_EXISTS(400, "첫번째 상품 이미지는 필수 입력 값 입니다."),
     ITEM_NOT_EXISTS(400, "상품 정보가 존재하지 않습니다."),
+    REST_STOCK_NOT_EXISTS(400, "상품의 재고가 부족 합니다."),
 
     // 배송
     DELIVERY_NOT_EXISTS(400, "배송 정보가 존재하지 않습니다."),

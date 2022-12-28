@@ -32,7 +32,7 @@ public class AdminAuthorizationInterceptor implements HandlerInterceptor {
         if(!Role.ADMIN.equals(roleEnum)) {
             throw new ForbiddenException(ErrorCode.FORBIDDEN_ADMIN);
         }
-
+        // 13:51
         return true;
     }
 
