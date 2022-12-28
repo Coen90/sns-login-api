@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthCheckController {
 
-    @GetMapping("/health")
+    @GetMapping("/admin/health")
     public ResponseEntity<HealthCheckResponseDto> healthCheck() {
         HealthCheckResponseDto healthCheckResponseDto = HealthCheckResponseDto.builder()
                 .status(true)

@@ -20,6 +20,8 @@ public enum ErrorCode {
     REFRESH_TOKEN_EXPIRED(401, "해당 refresh token은 만료됐습니다."),
     REFRESH_TOKEN_NOT_FOUND(400, "해당 refresh token은 존재하지 않습니다."),
 
+    // 인가
+    FORBIDDEN_ADMIN(403, "관리자 권한이 없습니다."),
 
     // 상품
     FIRST_ITEM_IMAGE_NOT_EXISTS(400, "첫번째 상품 이미지는 필수 입력 값 입니다."),
