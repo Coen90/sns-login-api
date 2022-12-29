@@ -46,3 +46,4 @@ token:
   secret: ${JWT_TOKEN_SECRET}
   access-token-expiration-time: 900000  # 15분
   refresh-token-expiration-time: 1210500000 # 2주
+

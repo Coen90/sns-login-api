@@ -1,6 +1,8 @@
 package com.shop.projectlion.api.item.service;
 
 import com.shop.projectlion.api.item.dto.GetItemResponseDto;
+import com.shop.projectlion.api.item.dto.UpdateItemDto;
+import com.shop.projectlion.domain.delivery.entity.Delivery;
 import com.shop.projectlion.domain.delivery.service.DeliveryService;
 import com.shop.projectlion.domain.item.entity.Item;
 import com.shop.projectlion.domain.item.service.ItemService;
@@ -26,6 +28,20 @@ public class ApiItemService {
         List<ItemImage> itemImages = itemImageService.findByItemOrderByItemImageIdAsc(item);
         GetItemResponseDto getItemResponseDto = GetItemResponseDto.of(item, itemImages);
         return getItemResponseDto;
+    }
+
+    @Transactional
+    public UpdateItemDto.Response updateItem(UpdateItemDto.Request updateItemRequestDto) {
+
+        // 1. 상품 정보 업데이트
+        Item updateItem = updateItemRequestDto.toEntity();
+        Item savedItem = itemService.updateItem(updateItemRequestDto.getItemId(), updateItem);
+
+        // 2. 배송 업데이트
+        Delivery delivery = deliveryService.findByDeliveryId(updateItemRequestDto.getDeliveryId());
+        savedItem.updateDelivery(delivery);
+
+        return UpdateItemDto.Response.of(savedItem);
     }
 
 }
