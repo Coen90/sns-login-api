@@ -6,6 +6,7 @@ import com.shop.projectlion.api.item.service.ApiItemService;
 import com.shop.projectlion.global.error.exception.ErrorCode;
 import com.shop.projectlion.global.error.exception.InvalidValueException;
 import com.shop.projectlion.global.resolver.MemberEmail;
+import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -24,6 +25,7 @@ public class ApiItemController {
         return ResponseEntity.ok(getItemResponseDto);
     }
 
+    @ApiOperation(value = "상품 수정 API")
     @PatchMapping("/{itemId}")
     public ResponseEntity<UpdateItemDto.Response> updateItem(@PathVariable Long itemId, @Validated @RequestBody UpdateItemDto.Request updateItemRequestDto) {
         if(updateItemRequestDto.getItemId() != itemId) {
