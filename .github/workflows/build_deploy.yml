@@ -1,7 +1,7 @@
 name: sns-login-api
-  on:
-    push:
-      branches: [ develop ]
+on:
+  push:
+    branches: [ master ]
       
 env:
   NAME: hyuntaepark # 자신의 계정 명
