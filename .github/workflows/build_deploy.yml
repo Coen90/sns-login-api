@@ -27,20 +27,20 @@ jobs:
       with:
         arguments: build
         # build-root-directory: project-lion-api # 나는 따로 올렸기에 이렇게 함.
-        
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{secrets.DOCKERHUB_USERNAME}}
-          password: ${{secrets.DOCKERHUB_TOKEN}}
-          
-      - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: ./project-lion-api
-          file: ./project-lion-api/Dockerfile
-          push: true
-          tags: ${{env.NAME}}/${{env.REPO}}:latest
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v1
+      with:
+        username: ${{secrets.DOCKERHUB_USERNAME}}
+        password: ${{secrets.DOCKERHUB_TOKEN}}
+
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: ./project-lion-api
+        file: ./project-lion-api/Dockerfile
+        push: true
+        tags: ${{env.NAME}}/${{env.REPO}}:latest
   deploy:
     needs: build
     name: Deploy
