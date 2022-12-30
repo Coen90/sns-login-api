@@ -34,5 +34,5 @@ public class ApiItemController {
 
         UpdateItemDto.Response updateItemResponseDto = apiItemService.updateItem(updateItemRequestDto);
         return ResponseEntity.ok(updateItemResponseDto);
-    }
+    } // 10201
 }
