@@ -48,6 +48,6 @@ jobs:
     runs-on: [ self-hosted, label-development ]
     steps:
     
-    - name: deploy run
-      run: |
-        sudo sh /home/ec2-user/run.sh
+      - name: deploy run
+        run: |
+          sudo sh /home/ec2-user/run.sh
