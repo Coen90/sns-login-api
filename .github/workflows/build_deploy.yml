@@ -26,7 +26,7 @@ jobs:
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
         arguments: build
-        # build-root-directory: project-lion-api # 나는 따로 올렸기에 이렇게 함.
+        # build-root-directory: project-lion-api # 나는 따로 올렸기에 하위 디렉토리 구조 필요없음
 
     - name: Login to DockerHub
       uses: docker/login-action@v1
