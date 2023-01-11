@@ -20,7 +20,7 @@ public class KakaoTokenController {
 
     private final String CONTENT_TYPE = "application/x-www-form-urlencoded;charset=utf-8";
     private final String GRANT_TYPE = "authorization_code";
-    private final String REDIRECT_URI = "http://localhost:8080/auth/kakao/callback";
+    private final String REDIRECT_URI = "http://3.37.124.189/auth/kakao/callback";
 
     @GetMapping("/login")
     public String login() {
