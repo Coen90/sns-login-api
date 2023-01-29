@@ -92,10 +92,12 @@
     - develop 브랜치에서 push
 
     - git Actions    
-    ![image](https://user-images.githubusercontent.com/81370558/215298818-30cfbddb-5203-4add-9d1c-5081127c7ed2.png)
+    ![image](https://user-images.githubusercontent.com/81370558/215299937-c2f02b59-6486-4536-9e73-da2d9a44e5af.png)
+    ![image](https://user-images.githubusercontent.com/81370558/215299946-2acdf056-7f34-4adf-9eda-c73977fb6234.png)
+
     
     - AWS EC2 Server
-    ![image](https://user-images.githubusercontent.com/81370558/215298825-e19ae4ec-3440-4304-8cb5-794faeab0ff5.png)
+    ![image](https://user-images.githubusercontent.com/81370558/215299944-f8ba73a0-a0ac-42f6-b959-3b866a36b040.png)
 
     - docker hub    
     ![image](https://user-images.githubusercontent.com/81370558/215298846-ec44fe06-1f74-4344-8d4f-17a45f3ad734.png)
