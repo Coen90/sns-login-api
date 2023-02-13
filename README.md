@@ -104,3 +104,7 @@
 
     - API 서버 health check    
     ![image](https://user-images.githubusercontent.com/81370558/215298862-b8cffded-fe22-4c22-8f86-f3d9590af06a.png)
+
+- SWAGGER 적용
+    - [http://3.37.124.189/swagger-ui/](http://3.37.124.189/swagger-ui/)
+	
